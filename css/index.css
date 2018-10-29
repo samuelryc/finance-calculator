@@ -1,0 +1,50 @@
+input {
+    padding: 10px;
+    display: block;
+    margin: 40px auto;
+}
+
+#submit {
+    color: white;
+    background-color: black;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#submit:hover {
+    color: black;
+    background-color: white;
+}
+
+#submit:focus {
+    outline: 0;
+}
+
+#table-stats-1 {
+    display: none;
+    margin: 2em auto 4em auto;
+}
+
+#table-stats-1 > tr > th {
+    padding: 1em 2em;
+}
+
+#table-stats-1 > tr > td {
+    padding: 0.5em;
+}
+
+#results-container {
+    display: none;
+}
+
+.page-title {
+    padding: 3em 0 1em 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+#result-interests,
+#result-money-to-save {
+    font-weight: bold;
+}

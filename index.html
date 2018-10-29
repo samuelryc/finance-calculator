@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Samuel Ryc, Audrey Deshaies-Lanctôt">
+
+		<title>Financial Calculator</title>
+
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">Financial Calculator</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<!--<a class="nav-link" href="#">Home
+								<span class="sr-only">(current)</span>
+							</a>-->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center" id="input-container">
+					<p class="lead page-title">Objective and input</p>
+					<input type="number" name="item-full-price" id="input-item-full-price" placeholder="Item Total Price" />
+					<input type="number" name="item-target-date" id="input-item-target-date" placeholder="Years" />
+					<input type="number" name="item-interests-rate" id="input-interests-rate" placeholder="Yearly Interests" />
+
+					<input type="submit" id="submit" value="Submit">
+				</div>
+				<div class="col-lg-12 text-center" id="results-container">
+					<p class="lead page-title">Results</p>
+
+					<p id="p-interests-gained" class="lead"></p>
+					<p id="p-money-invested" class="lead"></p>
+
+					<table id="table-stats-1"></table>
+				</div>
+			</div>
+		</div>
+
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
