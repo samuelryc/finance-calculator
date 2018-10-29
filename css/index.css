@@ -45,6 +45,9 @@ input {
 }
 
 #result-interests,
-#result-money-to-save {
+#result-money-to-save,
+#result-interest-rate,
+#result-target-price {
     font-weight: bold;
+    font-size: 1.10rem;
 }
