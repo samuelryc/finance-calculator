@@ -30,6 +30,7 @@ window.index = {
             );
 
             var result_interests = (item_full_price * Math.pow((1 + (item_interests_rate / 100)), item_target_date) - item_full_price).toFixed(2);
+            console.log(result_interests);
             $('#p-target-full-price').append('Target price' + ' ' + '<span id="result-target-price">' + commafy(item_full_price) + '$' + '</span>');
             $('#p-interests-gained').append('Profit from interests after' + ' ' + item_target_date + ' ' + 'years <span id="result-interests">' + commafy(result_interests) + '$' + '</span>');
             $('#p-interests-rate').append('Interests annual rate' + ' ' + '<span id="result-interest-rate">' + item_interests_rate + '%' +'</span>');
