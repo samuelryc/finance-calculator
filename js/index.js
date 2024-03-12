@@ -6,29 +6,57 @@ window.index =
     {
         $("#input-target-future-value").on(
             "change",
-            function(event) {
-                targetFutureValue = $(this).val();
+            function() {
+                const user_input = $(this).val();
+
+                if (user_input < 1 || user_input > 1000000000000) {
+                    $("#error-target-future-value").show();
+                } else {
+                    $("#error-target-future-value").hide();
+                    targetFutureValue = user_input;
+                }
             }
         );
 
         $("#input-present-value").on(
             "change",
-            function(event) {
-                presentValue = $(this).val();
+            function() {
+                const user_input = $(this).val();
+
+                if (user_input < 1 || user_input > 1000000000000) {
+                    $("#error-present-value").show();
+                } else {
+                    $("#error-present-value").hide();
+                    presentValue = user_input;
+                }
             }
         );
 
         $("#input-years").on(
             "change",
-            function(event) {
-                years = $(this).val();
+            function() {
+                const user_input = $(this).val();
+
+                if (user_input < 1 || user_input > 1000000000000) {
+                    $("#error-years").show();
+                } else {
+                    $("#error-years").hide();
+                    years = user_input;
+                }
             }
         );
 
         $("#input-interest-rate").on(
             "change",
-            function(event) {
-                interestRate = $(this).val();
+            function() {
+                const user_input = $(this).val();
+                
+                if (user_input < 0 || user_input > 100) {
+                    $("#error-interest-rate").show();
+                } else {
+                    $("#error-interest-rate").hide();
+                    interestRate = user_input;
+                }
             }
         );
 
@@ -47,7 +75,6 @@ window.index =
                 );
 
                 const rate = interestRate / 100;
-                const futureValue = targetFutureValue * Math.pow(1 + rate, years);
 
                 $("#p-target-future-value").append("Target amount" + " " + '<span id="result-future-value">' + Number(targetFutureValue).toFixed(2) + " $" + "</span>");
                 $("#p-present-value").append("Initial amount" + " " + '<span id="result-present-value">' + Number(presentValue).toFixed(2) + " $" + "</span>");
@@ -57,21 +84,8 @@ window.index =
                 $("#table-stats-1").fadeIn(2000);
 
                 for (let year = 1; year <= years; year++) {
-                    // Calculate future value for each year
                     const futureValue = presentValue * Math.pow(1 + rate, year);
-                
-                    // Calculate difference from target future value
-                    const difference = targetFutureValue - futureValue;
-                
-                    // Print results with formatting
-                    console.log(targetFutureValue);
-                    console.log(`${year}\t$${Number(targetFutureValue).toFixed(2)}\t$${futureValue.toFixed(2)}\t$${difference.toFixed(2)}`);
-                
-                    // Update present value for next year (optional)
-                    // This assumes deposits are made annually. You can remove this line if not applicable.
-                    //targetFutureValue = futureValue;
-                    //const money_remaining_to_goal = difference.toFixed(2) + " $" 
-                    
+
                     $("#table-stats-1").append(
                         '<tr class="tr-row-' + year + '">' +
                             "<td>" + year + "</td>" +

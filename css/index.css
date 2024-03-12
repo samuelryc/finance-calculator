@@ -1,13 +1,13 @@
 input {
     padding: 10px;
     display: block;
-    margin: 40px auto;
+    margin: 40px auto 15px auto;
 }
 
 #submit {
     color: white;
     background-color: black;
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
     border: 1px solid black;
 }
@@ -50,4 +50,14 @@ input {
 #result-interests-gained {
     font-weight: bold;
     font-size: 1.10rem;
+}
+
+.user-input {
+    min-width: 250px;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 1em;
 }
