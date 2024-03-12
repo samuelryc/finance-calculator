@@ -30,18 +30,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" id="input-container">
-                    <p class="lead page-title">Objective and input</p>
-                    <input type="number" name="target-future-value" id="input-target-future-value" placeholder="Target future value" />
-                    <input type="number" name="present-value" id="input-present-value" placeholder="Present value" />
+                    <p class="lead page-title">Inputs</p>
+                    <input type="number" name="target-future-value" id="input-target-future-value" placeholder="Target future value ($)" />
+                    <input type="number" name="present-value" id="input-present-value" placeholder="Present value ($)" />
                     <input type="number" name="years" id="input-years" placeholder="Years" />
-                    <input type="number" name="interest-rate" id="input-interest-rate" placeholder="Annual Interest Rate" />
+                    <input type="number" name="interest-rate" id="input-interest-rate" placeholder="Annual Interest Rate (%)" />
                     <input type="submit" id="submit" value="Submit" />
                 </div>
                 <div class="col-lg-12 text-center" id="results-container">
                     <p class="lead page-title">Results</p>
-                    <p id="p-target-full-price" class="lead"></p>
-                    <p id="p-money-invested" class="lead"></p>
-                    <p id="p-interests-rate" class="lead"></p>
+                    <p id="p-target-future-value" class="lead"></p>
+                    <p id="p-present-value" class="lead"></p>
+                    <p id="p-interest-rate" class="lead"></p>
                     <p id="p-interests-gained" class="lead"></p>
                     <table id="table-stats-1"></table>
                 </div>

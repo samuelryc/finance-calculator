@@ -44,10 +44,10 @@ input {
     text-transform: uppercase;
 }
 
-#result-interests,
-#result-money-to-save,
+#result-future-value,
+#result-present-value,
 #result-interest-rate,
-#result-target-price {
+#result-interests-gained {
     font-weight: bold;
     font-size: 1.10rem;
 }
